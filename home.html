@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./home.css" />
+
+    <style>
+      @font-face {
+        font-family: "SF Pro";
+        src: url("./public/SFPRODISPLAYREGULAR.OTF");
+        font-weight: 400;
+      }
+      @font-face {
+        font-family: "SF Pro";
+        src: url("./public/SFPRODISPLAYREGULAR.OTF");
+        font-weight: 500;
+      }
+      @font-face {
+        font-family: "SF Pro";
+        src: url("./public/SFPRODISPLAYMEDIUM.OTF");
+        font-weight: 600;
+      }
+      @font-face {
+        font-family: "SF Pro";
+        src: url("./public/SFPRODISPLAYBOLD.OTF");
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="desktop-3">
+        <img
+        class="desktop-3-child"
+        id="background"
+        alt=""
+        src="./public/Group16.png"
+      />
+
+      <img
+        class="desktop-3-item"
+        id="background2"
+        alt=""
+        src="./public/Group17.png"
+      />
+
+      <img
+        class="desktop-3-inner"
+        id="grid"
+        alt=""
+        src="./public/Group22.png"
+      />
+
+      <b class="steganography-webapp">
+        <p class="steganography">Steganography</p>
+        <p class="steganography">Webapp</p>
+      </b>
+      <div class="name-lets-you">
+        &lt;name&gt; lets you hide messages in images, ensuring your information
+        remains invisible. Our web app offers unparalleled security for your
+        communications.
+      </div>
+      <nav class="navbar" id="navbar">
+        <div class="navbar-child"></div>
+        <div class="logo"><a href="home.html"><b>Stegano</b></a></div>
+        <div class="decode"><a href="decode.html">Decode</a></div>
+        <div class="encode"><a href="encode.html">Encode</a></div>
+        <div class="how-it-works"><a href="how-it-works.html">How it works?</a></div>
+      </nav>
+      <script>
+        function encode() {
+
+            window.location.href = 'encode.html';
+        }
+        function decode() {
+
+            window.location.href = 'decode.html';
+        }
+    </script>
+      <button class="encode-btn" id="encodebtn" onclick="encode()">
+        <div class="encode-btn-child"></div>
+        <div class="start-encoding">Start Encoding</div>
+        <div class="rectangle-parent">
+          <div class="frame-child"></div>
+          <div class="frame-item"></div>
+          <div class="frame-inner"></div>
+        </div>
+      </button>
+      <button class="decode-btn" id="decodebtn" onclick="decode()">
+        <div class="encode-btn-child"></div>
+        <div class="rectangle-parent">
+          <div class="frame-child"></div>
+          <div class="frame-item"></div>
+          <div class="frame-inner"></div>
+        </div>
+        <div class="start-encoding">Start Decoding</div>
+      </button>
+      <img class="info-icon" id="info" alt="" src="./public/info.png"/>
+
+      <div class="how-it-works1">
+        <div class="rectangle-container">
+          <img
+            class="rectangle-icon"
+            alt=""
+            src="./public/Rectangle48.png"
+          />
+
+          <div class="upload-the-image">
+            Upload the image you want to encode
+          </div>
+        </div>
+        <div class="frame-div">
+          <img
+            class="rectangle-icon"
+            alt=""
+            src="./public/Rectangle48-2.png"
+          />
+
+          <div class="only-share-the">
+            Only share the encoded image with trusted parties
+          </div>
+        </div>
+        <div class="rectangle-parent1">
+          <img
+            class="rectangle-icon"
+            alt=""
+            src="./public/Rectangle48-3.png"
+          />
+
+          <div class="trusted-parties-can">
+            Trusted parties can upload the encoded image to get the hidden
+            message
+          </div>
+        </div>
+        <b class="how-it-works2">How it works?</b>
+      </div>
+      <div class="rectangle-div"></div>
+      <b class="keep-your-messages">Keep your messages secure</b>
+      <div class="desktop-3-child1"></div>
+      <img
+        class="locklaptopcomputer-icon"
+        alt=""
+        src="./public/lock.laptopcomputer.svg"
+      />
+
+      <div class="desktop-3-child2"></div>
+      <div class="desktop-3-child3"></div>
+      <div class="uses-strong-encryption">
+        Uses strong encryption algorithms on the encoded message for further
+        security
+      </div>
+      <div class="only-share-the1">
+        Only share the encoded image and decryption key with trusted people
+        using our link share feature
+      </div>
+      <div class="message-can-only">
+        Message can only be decoded by trusted people when you share the link
+        and decryption key
+      </div>
+      <img
+        class="person2badgekey-icon"
+        alt=""
+        src="./public/person.2.badge.key.svg"
+      />
+
+      <img class="linkicloud-icon" alt="" src="./public/link.icloud.svg" />
+    </div>
+  </body>
+</html>

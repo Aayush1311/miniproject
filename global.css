@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  line-height: normal;
+}
+
+@font-face {
+  font-family: "SF Pro";
+  src: url("./fonts/SFPRODISPLAYREGULAR.OTF");
+}
+
+:root {
+  /* fonts */
+  --font-sf-pro: "SF Pro";
+
+  /* font sizes */
+  --font-size-base: 16px;
+  --font-size-45xl: 64px;
+  --font-size-19xl: 38px;
+  --font-size-32xl: 51px;
+  --font-size-xl: 20px;
+
+  /* Colors */
+  --color-white: #fff;
+  --color-gainsboro: #d9d9d9;
+  --color-black: #000;
+  --color-whitesmoke-100: #ececec;
+  --color-whitesmoke-200: rgba(236, 236, 236, 0.5);
+  --color-gray: rgba(255, 255, 255, 0.65);
+
+  /* Gaps */
+  --gap-21xl: 40px;
+  --gap-61xl: 80px;
+  --gap-xl: 20px;
+
+  /* Paddings */
+  --padding-xl: 20px;
+  --padding-31xl: 50px;
+  --padding-20xl: 39px;
+  --padding-30xl: 49px;
+  --padding-40xl: 59px;
+  --padding-47xl: 66px;
+  --padding-69xl: 88px;
+
+  /* Border radiuses */
+  --br-8xs: 5px;
+  --br-mini: 15px;
+  --br-6xl: 25px;
+  --br-3xs: 10px;
+}

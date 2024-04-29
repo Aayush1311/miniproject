@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./decode.css" />
+
+    <style>
+        @font-face {
+            font-family: "SF Pro";
+            src: url("./public/SFPRODISPLAYREGULAR.OTF");
+            font-weight: 400;
+        }
+        /* Additional CSS styles as needed */
+    </style>
+</head>
+<body>
+<div class="encode2">
+    <img class="bg-icon" id="backgrond" alt="" src="./public/bg.png" />
+    <b class="encode3">Decode</b>
+    <nav class="navbar2" id="navbar">
+        <div class="navbar-inner"></div>
+        <div class="logo2"><a href="home.html"><b>Stegano</b></a></div>
+        <div class="decode5"><a href="decode.html">Decode</a></div>
+        <div class="encode4"><a href="encode.html">Encode</a></div>
+        <div class="how-it-works3"><a href="how-it-works.html">How it works?</a></div>
+    </nav>
+    <form id="decode-form">
+        <div class="encodebox" id="decodebox">
+            <div class="box"></div>
+            <button class="encodebtn" id="encodebtn">
+                <div class="encodebtn-child"></div>
+                <div class="encode5">Decode</div>
+            </button>
+            <div class="add-image-and">Add Image and decode password</div>
+            <input type="file" id="image_path" name="image_path" accept=".jpg">
+            <input type="text" id="key" name="key" placeholder="Password">
+            <input type="text" id="output_text_path" name="output_text_path" placeholder="Output Text Path">
+        </div>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#decode-form').submit(function(e) {
+                e.preventDefault();
+                $.ajax({
+                    type: 'POST',
+                    url: '/decode',
+                    data: $(this).serialize(),
+                    success: function(response) {
+                        if (response.success) {
+                            alert('Text decoded successfully. Result saved at: ' + response.extracted_text_path);
+                        } else {
+                            alert('Error: ' + response.error);
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</div>
+</body>
+</html>

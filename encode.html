@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <link rel="stylesheet" href="./global.css" />
+    <link rel="stylesheet" href="./encode.css" />
+
+    <style>
+        @font-face {
+            font-family: "SF Pro";
+            src: url("./public/SFPRODISPLAYREGULAR.OTF");
+            font-weight: 400;
+        }
+        /* Additional CSS styles as needed */
+    </style>
+</head>
+<body>
+<div class="encode">
+    <img class="bg-icon" id="backgrond" alt="" src="./public/bg.png" />
+
+    <b class="encode1">Encode</b>
+    <nav class="navbar" id="navbar">
+        <div class="navbar-child"></div>
+        <div class="logo"><a href="home.html"><b>Stegano</b></a></div>
+        <div class="decode"><a href="decode.html">Decode</a></div>
+        <div class="encode2"><a href="encode.html">Encode</a></div>
+        <div class="how-it-works"><a href="how-it-works.html">How it works?</a></div>
+    </nav>
+    <form id="encode-form">
+        <div class="encodebox">
+            <div class="box"></div>
+            <button class="encodebtn" id="encodebtn">
+                <div class="encodebtn-child"></div>
+                <div class="encode3">Encode</div>
+            </button>
+            <div class="add-image-and">Add Image and the message</div>
+            <input type="file" id="image_path" name="image_path" accept=".jpg">
+            <input type="file" id="text_file_path" name="text_file_path" accept=".txt">
+            <input type="text" id="output_image_path" name="output_image_path" placeholder="Output Image Path">
+            <input type="text" id="key" name="key" placeholder="Password">
+        </div>
+    </form>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#encode-form').submit(function(e) {
+                e.preventDefault();
+                $.ajax({
+                    type: 'POST',
+                    url: '/encode',
+                    data: $(this).serialize(),
+                    success: function(response) {
+                        if (response.success) {
+                            alert('Image encoded successfully. Result saved at: ' + response.result_image_path);
+                        } else {
+                            alert('Error: ' + response.error);
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</div>
+</body>
+</html>
